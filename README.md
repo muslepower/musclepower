@@ -1,277 +1,203 @@
 <!--
-  ╔══════════════════════════════════════════════════════════════════╗
-  ║  JiliTech · Oral Muscle Rehabilitation Platform                 ║
-  ║  肌力科技 · 口腔肌肉功能康复平台                                    ║
-  ║  GitHub README — EN/CN Bilingual                                ║
-  ╚══════════════════════════════════════════════════════════════════╝
+  JiliTech · Oral Muscle Rehabilitation Platform
+  肌力科技 · 口腔肌肉功能康复平台
+  GitHub README — EN/CN Bilingual · Company Profile Edition
 -->
 
-# 🦷 JiliTech — Oral Muscle Rehabilitation Platform
-# 🦷 肌力科技 — 口腔肌肉功能康复平台
+<p align="center">
+  <img src="./assets/jilitech-logo.png" width="120" alt="JiliTech Logo" />
+</p>
 
-> **AI-powered wearable EMG sensor + WeChat Mini Program — professional oral muscle training at home.**
+<h1 align="center">🦷 JiliTech · 肌力科技</h1>
+<h3 align="center">Oral Muscle Rehabilitation Platform · 口腔肌肉功能康复平台</h3>
+
+<p align="center">
+  <em>Professional-grade oral muscle rehabilitation — delivered at home.</em><br/>
+  <em>专业级口腔肌肉康复训练，在家即可完成。</em>
+</p>
+
+<p align="center">
+  <a href="https://bymusclepower.com/"><img src="https://img.shields.io/badge/🌐_Website-bymusclepower.com-bb1b20" alt="Website"/></a>
+  <img src="https://img.shields.io/badge/WeChat-知力智见-07C160?logo=wechat" alt="WeChat"/>
+  <img src="https://img.shields.io/badge/Location-Xi'an,_China-blue" alt="Location"/>
+  <img src="https://img.shields.io/badge/Domain-Medical_Tech-orange" alt="Domain"/>
+</p>
+
+---
+
+## 🌟 Who We Are · 关于我们
+
+**JiliTech (肌力科技)** is a medical technology company based in Xi'an, China, dedicated to making professional oral muscle rehabilitation accessible to everyone — at home, at any time.
+
+**肌力科技（JiliTech）** 是一家总部位于西安的医疗科技公司，致力于让每一位患者都能在家获得专业级的口腔肌肉康复训练服务。
+
+We combine wearable sensor hardware, intelligent mobile applications, and clinical management tools to build a complete, end-to-end rehabilitation ecosystem for patients, families, and healthcare providers.
+
+我们将可穿戴传感设备、智能移动应用与临床管理工具深度融合，为患者、家属和医疗机构打造完整的口腔肌肉康复生态系统。
+
+> *"Enable every patient to receive professional-grade muscle rehabilitation therapy without leaving home."*
 >
-> **AI 驱动的可穿戴肌电传感器 + 微信小程序，在家即可完成专业级口腔肌肉训练。**
-
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Vue 3](https://img.shields.io/badge/Vue-3.x-4FC08D?logo=vue.js)](https://vuejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)](https://www.typescriptlang.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Python%203.10-009688?logo=fastapi)](https://fastapi.tiangolo.com)
-[![WeChat MiniProgram](https://img.shields.io/badge/WeChat-MiniProgram-07C160?logo=wechat)](https://developers.weixin.qq.com)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?logo=springboot)](https://spring.io/projects/spring-boot)
-[![BLE](https://img.shields.io/badge/BLE-5.0-0082FC?logo=bluetooth)](https://www.bluetooth.com)
-
-📡 Website / 官网: **[bymusclepower.com](https://bymusclepower.com/)** · 🏢 肌力（西安）医疗科技有限责任公司 · 📱 公众号: **知力智见**
+> *"让每一位患者都能在家享受专业级肌功能康复治疗。"*
 
 ---
 
-## 🚀 What We Build · 我们的产品
+## 🎯 What We Solve · 我们解决的问题
 
-**JiliTech** develops the world's first consumer-grade tongue & lip muscle EMG monitor paired with an intelligent training ecosystem — from BLE wearable hardware through WeChat Mini Program to clinical backend.
-
-**肌力科技** 打造全球首款消费级舌唇肌电监测设备，配合智能训练生态——从 BLE 可穿戴硬件到微信小程序，再到临床数据后台，一站式覆盖。
-
-```
-[ EMG Wearable Sensor ] ──BLE──▶ [ WeChat Mini Program ] ──HTTP──▶ [ Clinical Backend ]
-  100ms 实时数据采集                   居家训练 · AI 反馈                  医生工作站 · 数据分析
-```
-
-| User · 用户 | Need · 需求 | Scenario · 场景 |
-|---|---|---|
-| 👶 Children's parents / 儿童家长 | Training compliance monitoring / 训练依从性监控 | Orthodontic / 口腔正畸 |
-| 🤕 Facial palsy adults / 面瘫成人 | Rehabilitation progress tracking / 康复进展追踪 | Neurology / 神经康复 |
-| 🏥 Post-surgery patients / 术后患者 | Remote exercise guidance / 远程训练指导 | Oral surgery / 口腔外科 |
-| 👨‍⚕️ Dentists & Therapists / 牙医与治疗师 | Patient management + data analysis / 患者管理与数据分析 | Clinical / 临床诊疗 |
-
----
-
-## 🏗️ System Architecture · 系统架构
-
-**4 web sub-systems** + **1 WeChat Mini Program** + **1 BLE hardware device** — full-stack medical rehabilitation platform.
-
-**4 个 Web 子系统** + **1 个微信小程序** + **1 个 BLE 硬件设备** — 全栈医疗康复平台。
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     ADMIN LAYER · 管理后台层                        │
-│  jl-ui-admin-second          jl-data-ui-second                  │
-│  运营管理后台                   企业数据平台                          │
-│  Vue3 + Yudao (Lite)         Vue3 + Yudao (Full) · 852 views   │
-└───────────────────────┬─────────────────────────────────────────┘
-                        │
-┌───────────────────────▼─────────────────────────────────────────┐
-│                   CLINICAL LAYER · 临床工作站层                     │
-│                   jl-pc-second                                  │
-│                   医生 PC 工作站                                   │
-│         Vben Admin 5.1 · WebSocket Real-time EMG               │
-└───────────────────────┬─────────────────────────────────────────┘
-                        │
-┌───────────────────────▼─────────────────────────────────────────┐
-│                    DATA LAYER · 影像数据层                         │
-│                   jl_data_center                                │
-│                   医学影像中心                                      │
-│        FastAPI + Vue3 · DICOM / CBCT / MRI / 3D Recon         │
-└─────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## ✨ Key Features · 核心功能
-
-### 🎯 Real-time EMG Measurement · 实时肌电测量
-- **WebSocket** streaming at **100ms** sampling interval / **100ms** 采样间隔实时数据流
-- Simultaneous dual-device measurement (tongue tip + lip muscle) / 双通道同步测量（舌尖 + 唇肌）
-- Live ECharts visualization with automatic annotation / ECharts 实时曲线 + 自动标注
-- 3 annotation algorithms: `lie_max_point` · `line_rising_slope` · `line_apf` (APF area) / 三种标注算法：最大值点 · 上升斜率 · APF 面积
-
-### 📱 WeChat Mini Program (Patient Side) · 微信小程序（患者端）
-- BLE device pairing & guided training sessions / BLE 设备配对 + 引导式训练课程
-- Personalized training plans with AI feedback / 个性化训练计划 + AI 实时反馈
-- Training compliance monitoring (daily / weekly trends) / 训练依从性监控（日/周趋势）
-- Progress photo management (9-grid layout) / 训练照片管理（九宫格布局）
-
-### 🏥 Doctor Workstation (`jl-pc-second`) · 医生工作站
-- Patient full-lifecycle management: create → diagnose → train → archive / 患者全生命周期管理：建档→诊断→训练→归档
-- 4-step intake form with clinical diagnosis multi-select / 四步接诊表 + 临床诊断多选
-- **HIS integration** for patient import / **HIS 系统对接** 一键导入患者
-- Doctor–patient messaging with training advice timeline / 医患消息 + 训练建议时间线
-- Multi-record comparison: EMG, facial scan, intraoral scan (up to 5 records) / 多记录对比：肌力曲线、面部扫描、口内扫描（最多 5 条）
-
-### 📊 Enterprise Data Platform (`jl-data-ui-second`) · 企业数据平台
-- Patient cohort management with multi-dimensional filtering / 患者队列管理 + 多维度筛选
-  - Age group · Region · Clinic · Gender · Annotation value range (`eq / gt / lt`) / 年龄段 · 区域 · 诊所 · 性别 · 标注值范围
-- **Dual tag/annotation system** / **标签/标注双类型系统**
-  - Labels (`type=2`) for classification / 标签用于分类
-  - Annotations (`type=1`) with algorithm + span for clinical analysis / 标注含算法+跨度，用于临床分析
-- 6-age-group stratification & reference range management / 六段年龄分层 + 参考区间管理
-- 3 export types: measurement / training / user data / 三种数据导出：测量数据 / 训练数据 / 用户数据
-- Filtered moving average: `filtered[i] = (data[i-1] + data[i] + data[i+1]) / 3` / 滤波移动平均
-
-### 🖼️ Medical Imaging Center (`jl_data_center`) · 医学影像中心
-- DICOM / CBCT / MRI medical imaging viewer / DICOM / CBCT / MRI 医学影像阅片
-- Intraoral scan & facial 3D scan support / 口内扫描 + 面部三维扫描
-- 3D reconstruction pipeline / 三维重建流水线
-- MinIO object storage integration / MinIO 对象存储集成
-
----
-
-## 🛠️ Tech Stack · 技术栈
-
-| Layer · 层次 | Technology · 技术选型 |
+| Challenge · 挑战 | Our Solution · 解决方案 |
 |---|---|
-| Frontend framework / 前端框架 | Vue 3 + TypeScript + Vite |
-| UI library / UI 组件库 | Element Plus / Ant Design Vue |
-| State management / 状态管理 | Pinia |
-| Charts / 图表 | ECharts 5.x |
-| Admin backend base / 管理后台基座 | Yudao (`yudao-ui-admin-vue3`) |
-| Doctor workstation / 医生工作站 | Vben Admin 5.1 |
-| Data API backend / 数据接口后端 | FastAPI (Python 3.10) |
-| Object storage / 对象存储 | MinIO |
-| Real-time communication / 实时通信 | WebSocket (EMG streaming) |
-| Brand theme / 品牌主色 | `#bb1b20` (JL signature red / JL 品牌红) |
+| Patients can't visit clinic daily / 患者无法每天到院 | At-home training with real-time guidance / 居家训练 + 实时反馈 |
+| Clinicians lack objective data / 医生缺乏客观数据 | Precision EMG sensor with quantified reports / 精准传感器 + 量化报告 |
+| Training compliance is hard to monitor / 训练依从性难以跟踪 | Automatic training record & progress tracking / 自动训练记录 + 进展追踪 |
+| Research data fragmented & unstructured / 科研数据分散无结构 | Unified data platform with clinical annotation tools / 统一数据平台 + 临床标注工具 |
 
 ---
 
-## 📐 Data Specification · 数据规格
+## 💡 Our Products · 核心产品
 
-```
-Measurement data density / 测量数据密度 : 1 point / 100ms  (舌唇肌力)
-Training data density    / 训练数据密度 : 1 point / 10ms   (训练传感器)
-Unit conversion          / 单位换算     : value(g) × 0.00981 = N (牛顿)
-X-axis time interval     / X轴时间间隔   : index × 0.1 = seconds (秒)
-Training alert threshold / 训练预警阈值  : < 600s → flagged red #a90000 (标红)
-```
+### 📡 Smart EMG Wearable · 智能肌电可穿戴设备
 
----
+A compact, non-invasive device that measures tongue and lip muscle activity in real time. Patients wear it during training sessions; the device wirelessly transmits data to the mobile app for instant feedback.
 
-## 📁 Project Structure · 项目结构
+一款小巧、无创的可穿戴设备，实时采集舌部和唇部肌肉活动数据。患者在训练时佩戴，设备通过无线传输将数据实时发送到手机，提供即时反馈。
 
-```
-jilitech-platform/
-├── jl-ui-admin-second/      # Ops Management Backend · 运营管理后台
-│   └── src/views/jl/        # 8 custom medical business modules · 8个定制医疗业务模块
-├── jl-pc-second/            # Doctor Workstation · 医生工作站
-│   └── src/views/dashboard/ # 79 custom views · WebSocket EMG module
-├── jl-data-ui-second/       # Enterprise Data Platform · 企业数据平台
-│   ├── src/api/jl/data/     # JlDataApi — 22 custom API methods · 22个定制API方法
-│   ├── src/views/child/     # Patient detail: measure / train / images · 患者详情
-│   └── src/views/iot/       # Global data lists · Tag & annotation management
-└── jl_data_center/          # Medical Imaging Center · 医学影像中心
-    ├── main.py               # FastAPI app entry · 应用入口
-    └── src/views/            # DICOM · 3D reconstruction viewer · 影像阅片
-```
+- 🔬 Simultaneous tongue-tip & lip muscle measurement / 舌尖与唇肌同步测量
+- 📶 Wireless Bluetooth connection, no cables / 无线蓝牙连接，无需导线
+- ⚡ Real-time data streaming with instant visual feedback / 实时数据传输，即时图形反馈
 
 ---
 
-## 🔌 API Overview · API 概览
+### 📱 WeChat Mini Program · 微信小程序（患者端）
 
-### JL Data Platform / 肌力数据平台 (`/jidongli/*`)
+An easy-to-use training companion for patients and their families. No app download needed — just scan and start.
 
-| Method | Endpoint | Description · 说明 |
-|---|---|---|
-| GET | `/jidongli/countJiliBusinessData` | Dashboard statistics (5 metrics) / 首页5项统计 |
-| GET | `/jidongli/pageJilihuanzhe` | Patient paginated list / 患者分页列表 |
-| GET | `/jidongli/getHuanzheCeli` | Measurement data by batch / 按批次查询测量数据 |
-| GET | `/jidongli/getHuanzheTrain` | Training data by month / 按月查询训练数据 |
-| GET | `/jidongli/pageHuanzheCeli` | Global measurement list (tag/annotation filter) / 测量数据全局列表 |
-| GET | `/jidongli/pageHuanzheTrain` | Global training list / 训练数据全局列表 |
-| POST | `/jidongli/annotateData` | Add clinical annotation / 添加临床标注 |
-| POST | `/jidongli/addTagsToData` | Add tag to data record / 为数据添加标签 |
-| POST | `/jl/user-file/create` | Upload patient photo / 上传患者图片 |
-| GET | `/jidongli/exportJl{Celi,Train,User}Data` | Export dataset (3 types) / 数据导出（3种） |
+专为患者及家属设计的便捷训练助手，无需下载，扫码即用。
+
+- 🎯 **Personalized training plans** tailored to diagnosis and age / **个性化训练方案**，按诊断与年龄定制
+- 📊 **Visual progress tracking** — daily & weekly trend charts / **可视化进展追踪** — 日/周趋势图
+- 🤖 **AI-powered feedback** on training performance / **AI 训练反馈**，实时指导
+- 🖼️ **Photo diary** for treatment progress documentation / **照片日记**，记录治疗全过程
 
 ---
 
-## 🎯 Clinical Use Cases · 典型临床场景
+### 🏥 Clinical Doctor Workstation · 医生临床工作站
 
-```
-Patient Journey · 患者就诊流程:
+A professional desktop platform for dentists and rehabilitation therapists to manage patients, review training data, and communicate care plans.
 
-  Register           Initial Assessment        Device Pairing        Home Training
-  患者建档              初诊评估                   设备配对               居家训练
-     ↓                     ↓                        ↓                     ↓
-  Doctor intake        EMG baseline             BLE connection        Daily sessions
-  医生接诊录入         肌电基线测量               BLE 连接               每日训练
-  (4-step form)                                                                 ↓
-                                                                      Doctor Review
-                                                                      医生复诊审核
-                                                                      (Progress charts
-                                                                       + Annotations)
-```
+专为牙医和康复治疗师设计的桌面端专业平台，用于患者管理、训练数据查阅与治疗方案沟通。
 
-**Target Clinical Areas · 目标临床领域:** Orthodontics · Facial Palsy · TMJ Disorders · Post-surgical Rehabilitation · Pediatric Orofacial Myology
-**覆盖科室：** 正畸科 · 面瘫/神经内科 · 颞下颌关节 · 口腔外科术后 · 儿童口面肌功能
+- 📋 **Complete patient journey management** — from intake to discharge / **患者全程管理** — 从建档到出院
+- 📈 **Real-time EMG curve visualization** with clinical annotation tools / **实时肌电曲线**，配备临床标注工具
+- 🔗 **Hospital HIS system integration** — import patients with one click / **对接医院 HIS 系统** — 一键导入患者
+- 💬 **Secure doctor–patient messaging** with training recommendation timeline / **安全的医患沟通** + 训练建议时间线
+- 🖼️ **Multi-modal data comparison**: EMG curves · facial scans · intraoral scans / **多模态数据对比**：肌力曲线 · 面部扫描 · 口内扫描
 
 ---
 
-## 🏢 About JiliTech · 关于肌力科技
+### 📊 Enterprise Data & Research Platform · 企业数据与科研平台
 
-**肌力（西安）医疗科技有限责任公司** (JiliTech) is a medical-tech startup dedicated to **oral muscle function rehabilitation**. Our mission:
+A powerful platform for clinic groups and research institutions to manage large cohorts, analyze population-level muscle force data, and support academic publications.
 
-**肌力科技** 是一家专注于 **口腔肌肉功能康复** 的医疗科技创业公司。我们的使命：
+专为连锁诊所集团和科研机构打造的大数据平台，支持大规模队列管理、人群肌力数据分析及学术研究。
 
-> *Enable every patient to receive professional-grade muscle rehabilitation therapy without leaving home.*
->
-> *让每一位患者都能在家享受专业级肌功能康复治疗。*
-
-| Item · 事项 | Details · 详情 |
-|---|---|
-| 🌐 Website / 官网 | [bymusclepower.com](https://bymusclepower.com/) |
-| 📍 Location / 所在地 | Xi'an, China · 中国西安 |
-| 📱 WeChat Official Account / 微信公众号 | **知力智见** |
-| 🎯 Market / 目标市场 | Orthodontics · Facial palsy · TMJ · Post-surgical rehab |
-| 🔬 Research / 科研合作 | Joint research with university dental programs / 与高校口腔医学院联合研究 |
-| 📈 Data Asset / 数据资产 | Multi-age-group muscle force reference ranges (0–3 / 3–12 / 12–20+) / 多年龄段肌力参考区间 |
-| 🏥 Deployment / 部署方式 | SaaS + private deployment for dental clinics / SaaS + 口腔诊所私有化部署 |
+- 🔍 **Multi-dimensional patient cohort filtering** — by region, clinic, age group, gender, and more / **多维度患者队列筛选** — 按区域、诊所、年龄段、性别等
+- 🏷️ **Clinical annotation & labeling system** for research-grade data quality / **临床标注与标签系统**，保障科研数据质量
+- 📐 **Age-stratified muscle force reference ranges** (6 age groups: infant to adult) / **分年龄段肌力参考区间**（6个年龄段：婴幼儿至成人）
+- 📤 **One-click data export** for statistical analysis / **一键数据导出**，方便统计分析
+- 🖼️ **Patient photo gallery management** with structured grouping / **患者照片档案管理**，结构化分组
 
 ---
 
-## 🗺️ Roadmap · 路线图
+### 🩻 Medical Imaging Center · 医学影像中心
 
-- [x] **Phase 1** — Core EMG measurement + WeChat Mini Program / 核心肌电测量 + 微信小程序
-- [x] **Phase 2** — Doctor workstation + data management platform / 医生工作站 + 数据管理平台
-- [x] **Phase 3** — Medical imaging center (DICOM / 3D reconstruction) / 医学影像中心
-- [ ] **Phase 4** — AI-powered training plan generation / AI 训练计划生成
-- [ ] **Phase 5** — SaaS data licensing for research partners / 科研数据授权平台
-- [ ] **Phase 6** — International expansion (EN localization) / 国际化拓展
+An integrated platform for storing, viewing, and analyzing medical imaging data related to oral and facial structures.
 
----
+集存储、阅片与分析于一体的口腔颌面医学影像平台。
 
-## 📄 License · 开源协议
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-本项目基于 MIT 协议开源 — 详见 [LICENSE](LICENSE) 文件。
+- 🏥 Supports DICOM · CBCT · MRI imaging formats / 支持 DICOM · CBCT · MRI 影像格式
+- 🦷 Intraoral scan & facial 3D scan viewing / 口内扫描与面部三维扫描浏览
+- 🔬 3D facial & dental reconstruction / 面部与牙齿三维重建
 
 ---
 
-## 🤝 Contributing · 参与贡献
+## 👥 Who We Serve · 服务对象
 
-We welcome contributions from / 欢迎以下领域贡献者:
-
-- 🦷 Dental / orthodontic clinicians — dataset labeling & clinical validation / 口腔正畸临床医师 — 数据标注与临床验证
-- 💻 Frontend engineers — medical-grade data visualization & mini-program development / 前端工程师 — 医疗级数据可视化与小程序开发
-- 🔬 Researchers — oral motor function, pediatric orofacial myology / 科研人员 — 口腔运动功能、儿童口面肌学
-
-Please read our contributing guidelines before submitting a PR. / 提交 PR 前请阅读贡献指南。
+<table>
+  <tr>
+    <th>User · 用户</th>
+    <th>Clinical Area · 临床领域</th>
+    <th>How We Help · 如何帮助</th>
+  </tr>
+  <tr>
+    <td>👶 Children &amp; parents<br/>儿童及家长</td>
+    <td>Orthodontics / 口腔正畸</td>
+    <td>Daily guided training + compliance reports for parents &amp; doctors<br/>每日引导训练 + 为家长和医生提供依从性报告</td>
+  </tr>
+  <tr>
+    <td>🤕 Facial palsy patients<br/>面瘫患者</td>
+    <td>Neurology / 神经康复</td>
+    <td>Quantified rehabilitation progress with clinical annotations<br/>量化康复进展，配合临床标注</td>
+  </tr>
+  <tr>
+    <td>🏥 Post-surgery patients<br/>术后患者</td>
+    <td>Oral surgery / 口腔外科</td>
+    <td>Remote exercise guidance, reducing follow-up visit frequency<br/>远程训练指导，减少复诊频次</td>
+  </tr>
+  <tr>
+    <td>👨‍⚕️ Dentists &amp; therapists<br/>牙医与治疗师</td>
+    <td>All dental specialties / 各口腔专科</td>
+    <td>Data-driven patient management + evidence-based treatment planning<br/>数据驱动的患者管理 + 循证治疗方案</td>
+  </tr>
+  <tr>
+    <td>🔬 Researchers<br/>科研人员</td>
+    <td>Dental research / 口腔医学研究</td>
+    <td>Structured datasets + reference range database for publication<br/>结构化数据集 + 参考区间数据库，支持发表</td>
+  </tr>
+</table>
 
 ---
 
-## 📬 Contact & Community · 联系我们
+## 🗺️ Our Journey · 发展历程
+
+- ✅ **Phase 1 · 第一阶段** — EMG wearable device + WeChat training mini-program / 肌电可穿戴设备 + 微信训练小程序
+- ✅ **Phase 2 · 第二阶段** — Doctor workstation + enterprise data management platform / 医生工作站 + 企业数据管理平台
+- ✅ **Phase 3 · 第三阶段** — Medical imaging center (CBCT / 3D reconstruction) / 医学影像中心（CBCT / 三维重建）
+- 🔄 **Phase 4 · 第四阶段** — AI-powered personalized training plan generation / AI 驱动的个性化训练方案自动生成
+- 📅 **Phase 5 · 第五阶段** — SaaS data platform for research partnerships / 面向科研机构的 SaaS 数据平台
+- 📅 **Phase 6 · 第六阶段** — International expansion / 国际化拓展
+
+---
+
+## 🤝 Partner With Us · 合作洽谈
+
+We welcome collaboration with:
+
+我们欢迎以下领域的合作：
+
+- 🏥 **Dental clinics & hospital departments** — pilot deployment and clinical data partnership / **口腔诊所和医院科室** — 试点部署与临床数据合作
+- 🔬 **Universities & research institutes** — joint research, dataset licensing, and co-publication / **高校与科研机构** — 联合研究、数据集授权与联合发表
+- 💼 **Medical device distributors** — regional distribution and co-marketing / **医疗器械经销商** — 区域代理与联合推广
+- 🌐 **International partners** — overseas clinical deployment and localization / **国际合作伙伴** — 海外临床部署与本地化
+
+---
+
+## 📬 Contact Us · 联系我们
 
 <table>
   <tr>
     <td align="center" width="240">
       <img src="./assets/jilitech-wechat-qr.png" width="200" alt="知力智见公众号二维码" /><br/>
-      <sub>📱 扫码关注公众号「知力智见」<br/>Follow us on WeChat</sub>
+      <b>📱 扫码关注公众号</b><br/>
+      <sub>微信公众号「知力智见」<br/>Follow us on WeChat: 知力智见</sub>
     </td>
     <td valign="top" style="padding-left:32px">
+      <h4>Get in touch · 联系方式</h4>
       <ul>
-        <li>🐛 <strong>Bug Reports / Feature Requests</strong> / 问题反馈与功能建议: <a href="../../issues">GitHub Issues</a></li>
-        <li>💼 <strong>Clinical Partnership</strong> / 临床合作: 公众号「知力智见」后台留言</li>
-        <li>🔬 <strong>Research Collaboration</strong> / 科研协作: 数据集授权 &amp; 联合发表，欢迎垂询</li>
-        <li>🏥 <strong>Clinic Deployment</strong> / 诊所部署: 提供 SaaS 订阅 &amp; 私有化部署方案</li>
-        <li>🌐 <strong>Website</strong> / 官网: <a href="https://bymusclepower.com/">bymusclepower.com</a></li>
+        <li>🌐 <strong>Website / 官网</strong>: <a href="https://bymusclepower.com/">bymusclepower.com</a></li>
+        <li>📱 <strong>WeChat Official Account / 微信公众号</strong>: 知力智见</li>
+        <li>🏢 <strong>Company / 公司</strong>: 肌力（西安）医疗科技有限责任公司</li>
+        <li>📍 <strong>Location / 地址</strong>: Xi'an, Shaanxi, China · 中国陕西西安</li>
+        <li>🐛 <strong>Technical Issues / 技术问题</strong>: <a href="../../issues">GitHub Issues</a></li>
+        <li>💼 <strong>Business Cooperation / 商务合作</strong>: 公众号后台留言</li>
       </ul>
     </td>
   </tr>
@@ -280,8 +206,9 @@ Please read our contributing guidelines before submitting a PR. / 提交 PR 前�
 ---
 
 <p align="center">
-  <strong>JiliTech · 让每一位患者都能在家享受专业级肌功能康复</strong><br>
-  <em>Bringing professional oral muscle rehabilitation to every home</em><br><br>
-  <img src="./assets/jilitech-wechat-qr.png" width="120" alt="知力智见 公众号二维码" /><br>
-  <sub>扫码关注 · 知力智见</sub>
+  <strong>JiliTech · 让每一位患者都能在家享受专业级肌功能康复</strong><br/>
+  <em>Bringing professional oral muscle rehabilitation to every home</em><br/><br/>
+  <a href="https://bymusclepower.com/">bymusclepower.com</a> · 肌力（西安）医疗科技有限责任公司<br/><br/>
+  <img src="./assets/jilitech-wechat-qr.png" width="120" alt="知力智见 公众号二维码" /><br/>
+  <sub>微信公众号：知力智见</sub>
 </p>
