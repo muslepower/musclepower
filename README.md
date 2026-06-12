@@ -5,7 +5,7 @@
 -->
 
 <p align="center">
-  <img src="./assets/jilitech-logo.png" width="120" alt="JiliTech Logo" />
+  <img src="./assets/logo.png" width="120" alt="JiliTech Logo" />
 </p>
 
 <h1 align="center">🦷 JiliTech · 肌力科技</h1>
